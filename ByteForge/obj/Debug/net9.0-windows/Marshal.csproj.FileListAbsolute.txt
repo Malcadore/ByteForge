@@ -1,0 +1,4 @@
+C:\Users\scott\source\repos\Marshal\Marshal\obj\Debug\net9.0-windows\Marshal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\scott\source\repos\Marshal\Marshal\obj\Debug\net9.0-windows\Marshal.AssemblyInfoInputs.cache
+C:\Users\scott\source\repos\Marshal\Marshal\obj\Debug\net9.0-windows\Marshal.AssemblyInfo.cs
+C:\Users\scott\source\repos\Marshal\Marshal\obj\Debug\net9.0-windows\Marshal.csproj.CoreCompileInputs.cache
