@@ -1,11 +1,4 @@
-﻿#region File Header Copyright © Mine Safety Appliances 9/30/2013 1:30:40 PM, MSA
-//==================================================
-//$$Author: 02pavettis22 $$
-//$$Date: 2014-03-27 10:52:37 -0400 (Thu, 27 Mar 2014) $$
-//$$URL: https://svn.msasafety.com/svn/MSALIB/In_Progress/Msa.Serialization/Source/Msa.Serialization/BinaryConverter.cs $$
-//$$Revision: 61 $$
-//==================================================
-#endregion
+﻿
 
 using System;
 using System.Diagnostics;
