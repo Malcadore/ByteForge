@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ByteForgeTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5352e3135d5c4a2b9ae8a5353835f06a1aa57ec8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ByteForgeTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ByteForgeTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\scott\\source\\repos\\ByteForge\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\unsafemarshaler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\unsafemarshaler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\packedstructconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\packedstructconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\iserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\iserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\endian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\endian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\conversionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\conversionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\conversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\conversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\byteorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\byteorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|c:\\users\\scott\\source\\repos\\byteforge\\byteforge\\binaryconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E7D0BD-E4A7-40D0-B09D-0098CAF58848}|ByteForge\\ByteForge.csproj|solutionrelative:byteforge\\binaryconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +47,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UnsafeMarshaler.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\UnsafeMarshaler.cs",
+              "RelativeDocumentMoniker": "ByteForge\\UnsafeMarshaler.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\UnsafeMarshaler.cs",
+              "RelativeToolTip": "ByteForge\\UnsafeMarshaler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:49:15.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PackedStructConverter.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\PackedStructConverter.cs",
+              "RelativeDocumentMoniker": "ByteForge\\PackedStructConverter.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\PackedStructConverter.cs",
+              "RelativeToolTip": "ByteForge\\PackedStructConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:49:12.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISerializer.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\ISerializer.cs",
+              "RelativeDocumentMoniker": "ByteForge\\ISerializer.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\ISerializer.cs",
+              "RelativeToolTip": "ByteForge\\ISerializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:49:10.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Endian.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\Endian.cs",
+              "RelativeDocumentMoniker": "ByteForge\\Endian.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\Endian.cs",
+              "RelativeToolTip": "ByteForge\\Endian.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:49:09.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConversionException.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\ConversionException.cs",
+              "RelativeDocumentMoniker": "ByteForge\\ConversionException.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\ConversionException.cs",
+              "RelativeToolTip": "ByteForge\\ConversionException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:49:05.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Conversion.cs",
               "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\Conversion.cs",
               "RelativeDocumentMoniker": "ByteForge\\Conversion.cs",
               "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\Conversion.cs",
               "RelativeToolTip": "ByteForge\\Conversion.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAgwAMAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T20:55:38.113Z",
+              "WhenOpened": "2025-06-04T23:49:02.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ByteOrder.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\ByteOrder.cs",
+              "RelativeDocumentMoniker": "ByteForge\\ByteOrder.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\ByteOrder.cs",
+              "RelativeToolTip": "ByteForge\\ByteOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:49:00.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BinaryConverter.cs",
+              "DocumentMoniker": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\BinaryConverter.cs",
+              "RelativeDocumentMoniker": "ByteForge\\BinaryConverter.cs",
+              "ToolTip": "C:\\Users\\scott\\source\\repos\\ByteForge\\ByteForge\\BinaryConverter.cs",
+              "RelativeToolTip": "ByteForge\\BinaryConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T23:48:53.672Z",
               "EditorCaption": ""
             }
           ]
