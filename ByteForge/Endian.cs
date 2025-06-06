@@ -1,4 +1,8 @@
-﻿
+﻿// File Name: Endian.cs
+// Project: ByteForge
+// GitHub: https://github.com/Malcadore/ByteForge
+// © 2025 Scott Pavetti.  Licensed under the MIT Licence.
+// See the LICENCE file in the repository root for full licence text.
 
 using System;
 using System.Diagnostics;

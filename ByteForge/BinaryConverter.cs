@@ -1,23 +1,23 @@
-﻿
+﻿// File Name: BinaryConverter.cs
+// Project: ByteForge
+// GitHub: https://github.com/Malcadore/ByteForge
+// © 2025 Scott Pavetti.  Licensed under the MIT Licence.
+// See the LICENCE file in the repository root for full licence text.
 
 using System;
 using System.Diagnostics;
 
 namespace ByteForge {
-    // in Windows, host order is ALWAYS Little Endian.
 
-    /*  README - IMPORTANT!
-     * This file has a lot of tricky syntax because of all the overloading that has to take place
-     * when dealing with ValueTypes.  Please use extra caution as similar looking syntax abounds
-     * and it is very easy to call the incorrect overload in some cases.
-     */
     /// <summary>
     /// A compeditor to the BitConverter, but can do specific endian conversions.
+    ///  Note: In Windows, host order is ALWAYS Little Endian.
     /// </summary>
     [DebuggerStepThrough]
     public static class BinaryConverter {
-
-        #region To_XXX
+        /*  
+ */
+        #region To_IntrinsiccType
 
         #region Signed 64 bit int parsing
         /// <summary>
@@ -141,7 +141,7 @@ namespace ByteForge {
 
         #endregion
 
-        #region GetBytes(XX)
+        #region GetBytes(IntrinsicType)
 
         #region Unsigned 32 bit
         /// <summary>

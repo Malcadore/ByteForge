@@ -1,9 +1,21 @@
-﻿
+﻿// File Name: UnsafeMarshaler.cs
+// Project: ByteForge
+// GitHub: https://github.com/Malcadore/ByteForge
+// © 2025 Scott Pavetti.  Licensed under the MIT Licence.
+// See the LICENCE file in the repository root for full licence text.
+
 using System;
 using System.Runtime.InteropServices;
 
-namespace Msa.Serialization {
-#warning The UnsafeMarshaler and UnsafeMarshaler2 need to be reviewed.  The variants are slightly different and require further research to see which is preferred.
+namespace ByteForge {
+
+    /// <summary>
+    /// Tclass provides unsafe marshaling methods for converting structures to byte arrays and vice versa.
+    /// It is not fully tested and should be used with caution.  When testing is done, this class will be
+    /// in a position to made public.
+    /// CurrentlThe UnsafeMarshaler and UnsafeMarshaler2 need to be reviewed.  The variants are slightly 
+    /// different and require further research to see which is preferred.
+    /// </summary>
     internal class UnsafeMarshaler {
         public static byte[] StructureToByteArray<T>(T obj) where T : struct {
             int len = Marshal.SizeOf(obj);
