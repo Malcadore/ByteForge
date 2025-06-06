@@ -23,6 +23,7 @@ namespace ByteForge {
         /// Converts a byte array representation to the desired type representation.  For example,
         /// a byte array that has to convert to a UInt32 will take four bytes and do the desired
         /// conversion based on the desired byte order.
+        /// FConvert is short for Format Convert. 
         /// </summary>
         /// <param name="source"></param>
         /// <param name="conversionType"></param>
