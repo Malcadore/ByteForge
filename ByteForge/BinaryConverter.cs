@@ -19,6 +19,44 @@ namespace ByteForge {
  */
         #region To_IntrinsiccType
 
+        #region Floating point and Double Precision
+
+     
+
+        public static double ToDouble(byte[] array, Int32 startIndex, ByteOrder sourceOrder)
+        {
+            return sourceOrder == ByteOrder.LittleEndian ? ToDoubleLE(array, startIndex) : ToDoubleBE(array, startIndex);
+        }
+        public static double ToDoubleBE(byte[] array, int startIndex)
+        {
+            var length = startIndex + 8;
+            var temp = array[startIndex..length];
+            Array.Reverse(temp);
+            return BitConverter.ToDouble(temp, 0);
+        }
+        public static double ToDoubleLE(byte[] array, int startIndex)
+        {
+            return BitConverter.ToDouble(array, startIndex);
+        }
+
+        public static float ToFloat(byte[] array, Int32 startIndex, ByteOrder sourceOrder)
+        {
+            return sourceOrder == ByteOrder.LittleEndian ? ToFloatLE(array, startIndex) : ToFloatBE(array, startIndex);
+        }
+        public static float ToFloatBE(byte[] array, int startIndex)
+        {
+            var length = startIndex + 4;
+            var temp = array[startIndex..length];
+            Array.Reverse(temp);
+            return BitConverter.ToSingle(temp, 0);
+        }
+        public static float ToFloatLE(byte[] array, int startIndex)
+        {
+            return BitConverter.ToSingle(array, startIndex);
+        }
+
+
+        #endregion
         #region Signed 64 bit int parsing
         /// <summary>
         /// Converts 8 bytes to Int64 value.

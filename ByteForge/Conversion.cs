@@ -7,6 +7,7 @@
 using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace ByteForge {
     /// <summary>
@@ -21,8 +22,8 @@ namespace ByteForge {
 
         /// <summary>
         /// Converts a byte array representation to the desired type representation.  For example,
-        /// a byte array that has to convert to a UInt32 will take four bytes and do the desired
-        /// conversion based on the desired byte order.
+        /// a byte array that has to convert to a UInt32 will take four bytes and do 
+        /// conversion to the intrinsic type byte order.
         /// FConvert is short for Format Convert. 
         /// </summary>
         /// <param name="source"></param>
@@ -30,6 +31,10 @@ namespace ByteForge {
         /// <param name="offset"></param>
         /// <param name="conversionOrder"></param>
         /// <returns></returns>
+        //public static T FConvert(byte[] source, Int32 offset, ByteOrder conversion) where T : IsJitIntrinsic
+        //{
+
+        //}
         public static Object FConvert(byte[] source, Type conversionType, Int32 offset, ByteOrder conversionOrder) {
             if (source == null) throw new ConversionException("source must be a valid array.");
 

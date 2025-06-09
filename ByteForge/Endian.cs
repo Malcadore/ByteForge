@@ -11,6 +11,8 @@ namespace ByteForge {
     /// <summary>
     /// A class that helps with checking the endianness as well as converting the endian
     /// posture of multi-byte value types.
+    /// TODO: This class's methods should be performance tested against regular 
+    /// calls to the platform's byte swapping techniques.
     /// </summary>
     [DebuggerStepThrough]
     public static class Endian {
@@ -64,7 +66,7 @@ namespace ByteForge {
         /// <returns></returns>
         public static UInt64 SwapUInt64(UInt64 value) {
             return (UInt64)(((SwapUInt32((UInt32)value) & 0xffffffffL) << 0x20) | (SwapUInt32((UInt32)(value >> 0x20)) & 0xffffffffL));
-        }
+        } 
         /// <summary>
         /// Checks the underlying endian of the platform using the BitConverter class.
         /// <seealso cref="BitConverter"/>

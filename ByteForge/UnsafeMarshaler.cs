@@ -5,6 +5,7 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using System;
+using System.Buffers.Binary;
 using System.Runtime.InteropServices;
 
 namespace ByteForge {
@@ -52,7 +53,6 @@ namespace ByteForge {
             T result;
 
             var handle = GCHandle.Alloc(rawData, GCHandleType.Pinned);
-
             try {
                 var rawDataPtr = handle.AddrOfPinnedObject();
                 result = (T)Marshal.PtrToStructure(rawDataPtr, typeof(T));
