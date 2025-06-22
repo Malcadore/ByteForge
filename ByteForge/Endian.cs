@@ -6,6 +6,8 @@
 
 using System;
 using System.Diagnostics;
+using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 
 namespace ByteForge {
     /// <summary>
@@ -66,7 +68,66 @@ namespace ByteForge {
         /// <returns></returns>
         public static UInt64 SwapUInt64(UInt64 value) {
             return (UInt64)(((SwapUInt32((UInt32)value) & 0xffffffffL) << 0x20) | (SwapUInt32((UInt32)(value >> 0x20)) & 0xffffffffL));
-        } 
+        }
+
+        /// <summary>
+        /// Swaps the bytes in an Int128 value using bit operators.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static Int128 SwapInt128(Int128 value)
+        {
+            // This is a bit tricky because Int128 is not a built-in type in C#.
+            // The cast to is (long) on the magic number is sketchy and needs to be tested.
+            unchecked
+            {
+                return (Int128)(((SwapInt64((Int64)value) & (long)0xffffffffffffffff) << 0x40) | (SwapInt64((Int64)(value >> 0x40)) & (long)0xffffffffffffffff));
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static unsafe Int128 UnsafeSwapInt128(Int128 value)
+        {
+            Int128 result = default;
+            byte* src = (byte*)&value;
+            byte* dst = (byte*)&result;
+
+            // Unrolled loop for maximum performance
+            dst[0] = src[15]; dst[1] = src[14]; dst[2] = src[13]; dst[3] = src[12];
+            dst[4] = src[11]; dst[5] = src[10]; dst[6] = src[9]; dst[7] = src[8];
+            dst[8] = src[7]; dst[9] = src[6]; dst[10] = src[5]; dst[11] = src[4];
+            dst[12] = src[3]; dst[13] = src[2]; dst[14] = src[1]; dst[15] = src[0];
+
+            return result;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static unsafe UInt128 UnsafeSwapUInt128(Int128 value)
+        {
+            UInt128 result = default;
+            byte* src = (byte*)&value;
+            byte* dst = (byte*)&result;
+
+            // Unrolled loop for maximum performance
+            dst[0] = src[15]; dst[1] = src[14]; dst[2] = src[13]; dst[3] = src[12];
+            dst[4] = src[11]; dst[5] = src[10]; dst[6] = src[9]; dst[7] = src[8];
+            dst[8] = src[7]; dst[9] = src[6]; dst[10] = src[5]; dst[11] = src[4];
+            dst[12] = src[3]; dst[13] = src[2]; dst[14] = src[1]; dst[15] = src[0];
+
+            return result;
+        }
+
+        /// <summary>
+        /// Swaps the bytes in an Int128 value using bit operators.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static UInt128 SwapUInt128(UInt128 value)
+        {
+            return (UInt128)(((SwapUInt64((UInt64)value) & 0xffffffffffffffffL) << 0x40) | (SwapUInt64((UInt64)(value >> 0x40)) & 0xffffffffffffffffLU)); 
+        }
+        
+
         /// <summary>
         /// Checks the underlying endian of the platform using the BitConverter class.
         /// <seealso cref="BitConverter"/>

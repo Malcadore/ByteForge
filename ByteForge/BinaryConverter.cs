@@ -257,6 +257,19 @@ namespace ByteForge {
             Int64 convertedIfBE = outputOrder == ByteOrder.LittleEndian ? valueInLittleEndian : Endian.SwapInt64(valueInLittleEndian);
             return BitConverter.GetBytes(convertedIfBE);
         }
+        #endregion 
+
+        #region 128 Bit Support
+        internal static byte[] GetBytes(Int128 valueInLittleEndian, ByteOrder outputOrder)
+        {
+            Int128 convertedIfBE = outputOrder == ByteOrder.LittleEndian ? valueInLittleEndian : Endian.SwapInt128(valueInLittleEndian);
+            return BitConverter.GetBytes(convertedIfBE);
+        }
+        internal static byte[] GetBytes(UInt128 valueInLittleEndian, ByteOrder outputOrder)
+        {
+            UInt128 convertedIfBE = outputOrder == ByteOrder.LittleEndian ? valueInLittleEndian : Endian.SwapUInt128(valueInLittleEndian);
+            return BitConverter.GetBytes(convertedIfBE);
+        }
         #endregion
 
         #endregion
