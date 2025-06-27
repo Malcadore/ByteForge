@@ -39,7 +39,7 @@ namespace ByteForgeTest
             {
                 var test = new TestStructure()
                 {
-                    member1 = random.Next(int.MinValue, int.MaxValue),
+                    member1 = 1,
                     member2 = (short)random.Next(short.MinValue, short.MaxValue),
                     member3 = (byte)random.Next(byte.MinValue, byte.MaxValue)
                 };

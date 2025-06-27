@@ -11,7 +11,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 
-namespace ByteForge {
+namespace ByteForge
+{
     /// <summary>
     /// A generic class that turns structures into byte arrays, as well as
     /// converts byte arrays into structures.
@@ -23,61 +24,47 @@ namespace ByteForge {
     /// in the source file.
     /// </remarks>
     /// <typeparam name="T"></typeparam>
-    [DebuggerStepThrough]
-    public class PackedStructConverter<T> where T : struct {
+    //[DebuggerStepThrough]
+    public class PackedStructConverter<T> where T : struct
+    {
         // a cached list of FieldInfo members.
         private readonly List<FieldInfo> fieldInfo = [];
-        private int packedSize = -1;
+        private int packedSize = 0;
 
         /// <summary>
         /// Constructor.
+        /// The constructor will scan the structure type for all fields, and store them in a list.
         /// </summary>
-        public PackedStructConverter() {
+        public PackedStructConverter()
+        {
             fieldInfo = new List<FieldInfo>();
             var fields = typeof(T).GetFields();
             fieldInfo.AddRange(fields);
-        }
-        
-        private void ForEach(Action<FieldInfo> action) {
-            foreach (var fi in fieldInfo) {
-                action(fi);
+
+            foreach (var field in fieldInfo)
+            {
+                packedSize += Marshal.SizeOf(field.FieldType);
             }
         }
 
-        /// <summary>
-        /// Gets the packed size of the structure that this marshaler
-        /// corresponds to.
-        /// </summary>
-        public int PackedSize {
-            get {
-                if (packedSize == -1) {
-                    packedSize++; // bump the value back up to zero.
-                    ForEach(fi => {
-                        Type ft = fi.FieldType;
-                        packedSize += Marshal.SizeOf(ft);
-                    });
-                }
-                return packedSize;
-            }
-        }
-     
         /// <summary>
         /// Serializes a struct into a byte array, with the specified byte ordering.
         /// </summary>
         /// <param name="obj">The live instance of the structure to turn into a byte array.</param>
         /// <param name="conversionOrder">The byte order used in the output array.</param>
         /// <returns></returns>
-        public byte[] Serialize(T obj, ByteOrder conversionOrder) {
-            var structureSize = PackedSize;
-            var result = new byte[structureSize];
-
+        public byte[] Serialize(T obj, ByteOrder conversionOrder)
+        {
+            var result = new byte[packedSize];
             int offset = 0;
 
-            ForEach(fi => {
-                int size = Marshal.SizeOf(fi.FieldType);
-                Conversion.AddToByteArray(result, offset, fi.GetValue(obj), conversionOrder);
+            foreach (var field in fieldInfo)
+            {
+                int size = Marshal.SizeOf(field.FieldType);
+                Conversion.AddToByteArray(result, offset, field.GetValue(obj), conversionOrder);
                 offset += size;
-            });
+            }
+
             return result;
         }
 
@@ -88,13 +75,15 @@ namespace ByteForge {
         /// <param name="nativeData">The array representation of the struct.</param>
         /// <param name="conversionOrder">The byte order used in the array.</param>
         /// <returns></returns>
-        public T Deserialize(byte[] nativeData, ByteOrder conversionOrder) {
+        public T Deserialize(byte[] nativeData, ByteOrder conversionOrder)
+        {
             var result = new T();
             var obj = result as object; // boxing required
             var offset = 0;
-            foreach (var field in fieldInfo) {
+            foreach (var field in fieldInfo)
+            {
                 var size = Marshal.SizeOf(field.FieldType);
-                var value = Conversion.FConvert(nativeData, field.FieldType, offset, conversionOrder);
+                var value = Conversion.NConvert(nativeData, field.FieldType, offset, conversionOrder);
                 field.SetValue(obj, value);
                 offset += size;
             }
@@ -109,13 +98,15 @@ namespace ByteForge {
         /// <param name="offset">Starts deserializing the array here.</param>
         /// <param name="conversionOrder">The byte order used in the array.</param>
         /// <returns></returns>
-        public T Deserialize(byte[] nativeData, Int32 offset, ByteOrder conversionOrder) {
+        public T Deserialize(byte[] nativeData, Int32 offset, ByteOrder conversionOrder)
+        {
             T result = new T();
             var obj = result as object; // boxing required
             int theOffset = offset;
-            foreach (var field in fieldInfo) {
+            foreach (var field in fieldInfo)
+            {
                 int size = Marshal.SizeOf(field.FieldType);
-                var value = Conversion.FConvert(nativeData, field.FieldType, theOffset, conversionOrder);
+                var value = Conversion.NConvert(nativeData, field.FieldType, theOffset, conversionOrder);
                 field.SetValue(obj, value);
                 theOffset += size;
             }

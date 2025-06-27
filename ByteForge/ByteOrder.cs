@@ -4,13 +4,15 @@
 // © 2025 Scott Pavetti.  Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
-namespace ByteForge {
+namespace ByteForge
+{
     /// <summary>
     /// Represents the endian byte order of the platform.  This 
     /// enum is used during serialization and deserialization to 
     /// specify the byte order of multi-byte values.
     /// </summary>
-    public enum ByteOrder {
+    public enum ByteOrder
+    {
         /// <summary>
         /// LSB first.
         /// </summary>
